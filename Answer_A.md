@@ -83,3 +83,44 @@ SELECT * FROM 口座 WHERE 更新日 IS NULL
 ```
 SELECT * FROM 口座 WHERE 名義 LIKE '%ハシ%'
 ```
+
+17.
+```
+SELECT * FROM 口座 WHERE 更新日 BETWEEN '2018-01-01' AND '2018-01-31'
+```
+
+18.
+```
+SELECT * FROM 口座 WHERE 種別 IN ('2', '3')
+```
+
+19.
+```
+SELECT * FROM 口座 WHERE 名義 IN ('サカタ リョウヘイ', 'マツモト ミワコ', 'ハマダ サトシ')
+```
+
+20.
+```
+SELECT * FROM 口座 WHERE 更新日 BETWEEN '2017-12-30' AND '2018-01-04'
+OR
+SELECT * FROM 口座 WHERE 更新日 >= '2017-12-30' AND 更新日 <= '2018-01-04'
+```
+
+21.
+```
+SELECT * FROM 口座 WHERE 残高 < 10000 AND 更新日 IS NOT NULL
+```
+
+22.
+```
+SELECT * FROM 口座 
+  WHERE 口座番号 LIKE '%2______%'
+  AND 名義 LIKE '%エ__ %コ'
+```
+
+23.
+```
+口座テーブルPKEY = 口座番号
+取引テーブルPKEY = 取引番号
+取引事由テーブルPKEY = 取引事由ID
+```
