@@ -42,3 +42,23 @@ INSERT INTO 口座 VALUES('1239855', 'タカシナ　ミツル', '2', 6509773);
 ```
 DELETE FROM 口座
 ```
+
+9.
+```
+SELECT * FROM 口座 WHERE 口座番号 = '0037651'
+```
+
+10.
+```
+SELECT * FROM 口座 WHERE 残高 > 0
+```
+
+11.
+```
+SELECT * FROM 口座 WHERE 口座番号 < '1000000'
+```
+
+12.
+```
+SELECT * FROM 口座 WHERE 更新日 < '2018-01-01'
+```
