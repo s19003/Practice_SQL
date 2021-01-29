@@ -124,3 +124,32 @@ SELECT * FROM 口座
 取引テーブルPKEY = 取引番号
 取引事由テーブルPKEY = 取引事由ID
 ```
+
+24. 
+```
+SELECT * FROM 口座 ORDER BY 口座番号
+```
+
+25.
+```
+SELECT DISTINCT 名義 FROM 口座 ORDER BY 名義
+```
+
+26.
+```
+SELECT * FROM 口座 ORDER BY 4 DESC, 1
+```
+
+27.
+```
+SELECT * FROM 口座
+WHERE 更新日 IS NOT NULL
+ORDER BY 更新日 OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY
+```
+
+28.
+```
+SELECT 更新日, 残高 FROM 口座
+WHERE 残高 > 0 OR 更新日 IS NOT NULL
+ORDER BY 残高, 更新日 DESC OFFSET 10 ROWS FETCH NEXT 10 ROWS ONLY
+```
